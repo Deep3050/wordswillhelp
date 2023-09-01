@@ -44,9 +44,9 @@ app.use("/api/comments", comments);
 app.use("/api/messages", messages);
 
 if (process.env.NODE_ENV == "production") {
-  app.use(express.static(path.join(__dirname, "/client/build")));
+  app.use(express.static("https://words-will-help.onrender.com/client/build"));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client/build", "index.html"));
+    res.sendFile("https://words-will-help.onrender.com/index.html");
   });
 }
