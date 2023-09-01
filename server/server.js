@@ -17,7 +17,7 @@ dotenv.config();
 const httpServer = require("http").createServer(app);
 const io = require("socket.io")(httpServer, {
   cors: {
-    origin: ["https://words-will-help.onrender.com"],
+    origin: ["https://client-nhyp.onrender.com"],
   },
 });
 
